@@ -14,6 +14,8 @@
   "readme": "A bare bones Tessel 2 blinky script.",
   "dependencies": {
     "climate-si7005": "^0.1.5",
+    "johnny-five": "^0.9.59",
+    "tessel-io": "^0.6.4",
     "ws": "^1.1.1"
   }
 }

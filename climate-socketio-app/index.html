@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tessel 2 Climate-Monitor</title>
+    <style>
+        .gauge {
+            display: block;
+            float: left;
+        }
+        
+        #thermometer,
+        #hygrometer {
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="thermometer" class="gauge"></div>
+    <div id="hygrometer" class="gauge"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/vendor/justgage/justgage.js"></script>
+    <script src="/vendor/justgage/raphael-2.1.4.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
