@@ -25,16 +25,23 @@ wss.on('connection', function connection(ws) {
   setInterval(function () {
     // read some temperature data
     climateSensor.readTemperature('c', function(err, tempData) {
-      if (err) throw err;
+      if (err) {
+        console.error('error reading temperature data');
+      };
+      // read some humidity data
       climateSensor.readHumidity(function(err, humidData) {
-          if (err) throw err;
+          if (err) {
+            console.error('error reading humidity data');
+          };
           var sensorData = {
               temperature: { val: tempData.toFixed(2), unit: '°C' },
               humidity: { val: humidData.toFixed(2), unit: '%RH' }
           };
           // console.log('sensorData', sensorData);
           ws.send(JSON.stringify(sensorData), function ack(err) {
-              if (err) throw err;
+            if (err) {
+              console.error('error sending sensor data');
+            };
           });
       });
     })
