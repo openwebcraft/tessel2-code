@@ -71,7 +71,7 @@ board.on("ready", () => {
         }
     });
 
-    var port = 3000;
+    var port = 80;
     server.listen(port, () => {
         console.log(`http://${os.networkInterfaces().wlan0[0].address}:${port}`);
     });
