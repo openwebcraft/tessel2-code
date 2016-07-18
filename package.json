@@ -1,0 +1,19 @@
+{
+  "name": "tessel2-code",
+  "version": "0.1.0",
+  "description": "Tessel2 code project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "www.github.com/semanticdreamer/tessel2-code",
+  "keywords": [
+    "Tessel"
+  ],
+  "license": "MIT",
+  "readme": "A bare bones Tessel 2 blinky script.",
+  "dependencies": {
+    "climate-si7005": "^0.1.5",
+    "ws": "^1.1.1"
+  }
+}
