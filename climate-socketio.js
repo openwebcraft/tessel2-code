@@ -46,7 +46,7 @@ board.on("ready", () => {
                         thermometer: Math.round(temp),
                         hygrometer: Math.round(humid)
                     };
-                    console.log('sdata', sdata);
+                    // console.log('sdata', sdata);
                     clients.forEach(recipient => {
                         recipient.emit("report", sdata);
                     });
@@ -73,7 +73,7 @@ board.on("ready", () => {
 
     var port = 80;
     server.listen(port, () => {
-        console.log(`http://${os.networkInterfaces().wlan0[0].address}:${port}`);
+        console.log(`Web Server is listening on http://${os.networkInterfaces().wlan0[0].address}:${port}`);
     });
 
     process.on("SIGINT", () => {
