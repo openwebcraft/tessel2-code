@@ -1,2 +1,3 @@
 climate-socketio-app/
+climate-socketio-react-app/build
 node_modules/justgage/*.js
